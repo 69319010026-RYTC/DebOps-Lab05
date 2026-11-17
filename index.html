@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Jigsaw Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Browser Puzzle Game</p>
+          <h1>Car Jigsaw</h1>
+        </div>
+
+        <div class="controls">
+          <button id="shuffleBtn" type="button">Shuffle</button>
+          <button id="resetBtn" class="secondary" type="button">Reset</button>
+          <button id="musicToggle" class="secondary" type="button">Music: Off</button>
+        </div>
+
+        <div class="stats" aria-label="Game statistics">
+          <span>Moves: <strong id="moveCount">0</strong></span>
+          <span>Time: <strong id="timer">00:00</strong></span>
+        </div>
+      </header>
+
+      <main class="game-shell">
+        <div id="puzzleBoard" class="puzzle-board" aria-label="Puzzle board"></div>
+      </main>
+
+      <div id="message" class="message hidden" aria-live="polite"></div>
+
+      <div class="music-box">
+        <iframe
+          id="bgMusic"
+          title="Background music"
+          src=""
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
